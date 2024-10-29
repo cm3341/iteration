@@ -112,9 +112,20 @@ but with `map` instead
 
 ```{r}
 
-map(list_norm, mean_and_sd)
+output = map(list_norm, mean_and_sd)
+
 ```
 
+let's do a couple of other things
+
+```{r}
+output =
+  map(list_norm, mean_and_sd)
+bind_rows()
+
+output = map_dfr(list_norm, mean_and_sd)
+output = map_dbl(list_norm, IQR)
+```
 
 
 
